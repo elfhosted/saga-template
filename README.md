@@ -4,17 +4,15 @@ A Saga is your own written account of running apps on ElfHosted. You draft it wi
 
 ## Set it up
 
-1. Click **Use this template** at the top of this page, then **Create a new repository**. Make it public.
-2. Replace the sample files with the files from your ElfBot Saga export, keeping the same names:
-   - `index.md`
-   - `_data/saga.yml`
-   - `chapters/` (one file per chapter, named `YYYY-MM.md`)
-   - `assets/` (your charts, as `.svg` files)
+ElfBot's Saga page walks you through this, with links filled in for your account.
 
-   Delete `chapters/2026-12.md` and `assets/sample-availability.svg` if your export doesn't replace them. Leave `assets/saga.css` and the `_layouts` folder alone.
+1. In ElfBot, check your Saga and choose **Download my Saga**. You get `saga.zip`.
+2. Click **Use this template** at the top of this page, then **Create a new repository**. Make it public.
+3. Unzip `saga.zip`. In your new repository, choose **Add file**, then **Upload files**, select everything inside the unzipped folder and drag it onto the page. Choose **Commit changes**. Your files replace the samples, and the sample chapter drops out of the list once your Saga is in.
 
-   Your export may also include a `share/` folder of copies you can paste into other blogs and a `saga-drafts/` folder. This template never publishes either one, so they stay private even though they sit in your repository.
-3. In your repository, go to **Settings**, then **Pages**. Under **Build and deploy**, choose **Deploy from a branch**, pick the `main` branch and the `/ (root)` folder, then save. Your site appears at `https://USERNAME.github.io/REPO` within a minute or two.
+   The zip also holds a `share/` folder of copies you can paste into other blogs. This template never publishes it.
+4. Go to **Settings**, then **Pages**. Under **Build and deploy**, choose **Deploy from a branch**, pick the `main` branch and the `/ (root)` folder, then save. Your site appears at `https://USERNAME.github.io/REPO` within a minute or two.
+5. Back in ElfBot, paste that address into **Send us your link**. ElfBot checks the page for your Saga ID and the note, then sends it to ElfHosted to confirm your reward.
 
 ## Choose a look
 
@@ -58,7 +56,7 @@ The repository and the site belong to you. Edit the text freely, and delete the 
 
 ## The disclosure stays
 
-Every page shows a short note that you received hosting credit and that your opinions are your own. It lives in `_layouts/default.html`, not in your content, so editing `index.md` or `saga.yml` doesn't change it. It has to stay in place for the reward.
+Every page shows a short note that you received hosting credit and that your opinions are your own. It lives in `_layouts/default.html`, not in your content, so editing `index.md` or `saga.yml` doesn't change it. It has to stay in place for the reward, and so does the Saga ID at the foot of the page, which shows the site is yours.
 
 ## Licence
 

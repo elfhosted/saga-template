@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   {%- assign saga = site.data.saga -%}
+  {%- if page.sample and saga.id %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
   {%- assign style = saga.style -%}
   {%- unless style == 'long-read' or style == 'uptime-log' or style == 'at-a-glance' -%}{%- assign style = 'long-read' -%}{%- endunless -%}
   {%- assign palette = saga.palette -%}
@@ -71,6 +74,9 @@
 
     <footer class="foot">
       <p>Published by the author on their own site. Made with the <a href="https://github.com/elfhosted/saga-template">ElfHosted Saga template</a>.</p>
+      {%- if saga.id %}
+      <p class="saga-id">Saga ID: {{ saga.id | escape }}</p>
+      {%- endif %}
     </footer>
   </main>
 </body>

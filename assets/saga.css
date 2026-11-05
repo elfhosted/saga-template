@@ -91,6 +91,7 @@ body.saga { margin: 0; background: var(--bg); color: var(--ink); font-family: va
 .share a:hover, .share a:focus-visible { border-color: var(--accent); color: var(--accent); }
 .foot { border-top: 1px solid var(--line); margin-top: 40px; padding-top: 14px; font-size: 13px; color: var(--muted); }
 .foot p { margin: 0; }
+.foot .saga-id { margin-top: 6px; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; }
 
 /* ======================= Layout: long-read ======================= */
 /* The drop cap opens the author's first answer, never Sam's question ahead of it. */

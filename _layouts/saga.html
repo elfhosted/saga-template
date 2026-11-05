@@ -54,6 +54,8 @@ layout: default
   {%- endif %}
 
   {%- assign chapters = site.pages | where_exp: "p", "p.path contains 'chapters/'" | where_exp: "p", "p.layout == 'chapter'" | sort: "path" | reverse %}
+  {%- comment %} Once a real Saga is uploaded, the template's sample chapter stays out of the list. {% endcomment %}
+  {%- if site.data.saga.id %}{%- assign chapters = chapters | where_exp: "p", "p.sample != true" %}{%- endif %}
   {%- if chapters.size > 0 %}
   <section class="chapters" aria-labelledby="chapters-heading">
     <h2 id="chapters-heading">Chapters</h2>
