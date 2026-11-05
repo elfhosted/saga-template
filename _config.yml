@@ -1,7 +1,7 @@
-# Leave baseurl and url empty. GitHub Pages fills them in for project pages
-# (username.github.io/repo), and every link in the layouts uses relative_url.
-baseurl: ""
-url: ""
+# No baseurl or url here: GitHub Pages fills both in (for a project page,
+# /repo and https://username.github.io), but only when they are unset. Even an
+# empty value stops it, and every stylesheet and link then misses the /repo.
+# Every link in the layouts uses relative_url or absolute_url.
 lang: en
 markdown: kramdown
 kramdown:

@@ -8,7 +8,7 @@ ElfBot's Saga page walks you through this, with links filled in for your account
 
 1. In ElfBot, check your Saga and choose **Download my Saga**. You get `saga.zip`.
 2. Click **Use this template** at the top of this page, then **Create a new repository**. Make it public.
-3. Unzip `saga.zip`. In your new repository, choose **Add file**, then **Upload files**, select everything inside the unzipped folder and drag it onto the page. Choose **Commit changes**. Your files replace the samples, and the sample chapter drops out of the list once your Saga is in.
+3. Unzip `saga.zip`. In your new repository, choose **Add file**, then **Upload files**, select everything inside the unzipped folder and drag it onto the page. Upload the files, not `saga.zip` itself: GitHub doesn't unzip it. Choose **Commit changes**. Your files replace the samples, and the sample chapter drops out of the list once your Saga is in.
 
    The zip also holds a `share/` folder of copies you can paste into other blogs. This template never publishes it.
 4. Go to **Settings**, then **Pages**. Under **Build and deploy**, choose **Deploy from a branch**, pick the `main` branch and the `/ (root)` folder, then save. Your site appears at `https://USERNAME.github.io/REPO` within a minute or two.
