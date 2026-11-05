@@ -1,6 +1,6 @@
 # Saga template
 
-A Saga is your own written account of running apps on ElfHosted. You draft it with Sam, ElfHosted's assistant, publish it on your own GitHub Pages site, and earn hosting credit for it whatever it says. This template turns the files from your ElfBot Saga export into a clean, readable site.
+A Saga is your own written account of running apps on ElfHosted. You draft it with Sam, ElfHosted's assistant, and publish it on your own GitHub Pages site. Qualifying Sagas earn hosting credit, whatever they say: see the [guide](https://docs.elfhosted.com/how-to/publish-a-saga/#what-you-earn). This template turns the files from your ElfBot Saga export into a clean, readable site.
 
 [![Watch: how to publish your Saga on GitHub Pages (2 minutes)](https://img.youtube.com/vi/gjp1zIcNCdI/maxresdefault.jpg)](https://youtu.be/gjp1zIcNCdI)
 
