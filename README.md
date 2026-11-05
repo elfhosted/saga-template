@@ -58,7 +58,7 @@ The repository and the site belong to you. Edit the text freely, and delete the 
 
 ## The disclosure stays
 
-Every page shows a short note that you received hosting credit and that your opinions are your own. It lives in `_layouts/default.html`, not in your content, so editing `index.md` doesn't change it. It has to stay in place for the reward, and so does the Saga ID at the foot of the page, which shows the site is yours.
+Every page shows a short note that you wrote it for ElfHosted's Saga programme, which offers hosting credit for an honest account, and that your opinions are your own. It lives in `_layouts/default.html`, not in your content, so editing `index.md` doesn't change it. It has to stay in place for the reward, and so does the Saga ID at the foot of the page, which shows the site is yours.
 
 ## Licence
 
