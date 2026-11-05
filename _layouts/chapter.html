@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-{%- assign saga = site.data.saga -%}
+{%- comment %} The Saga's settings: from its uploaded index.md (the home page, marked saga_kit), or from _data/saga.yml on sites made before that. {% endcomment %}
+{%- assign saga = site.pages | where: "url", "/" | where: "saga_kit", 1 | first | default: site.data.saga -%}
+{%- assign saga_id = saga.saga_id | default: saga.id -%}
 {%- assign asset_prefix = 'assets/' | relative_url -%}
 {%- assign src_from = 'src="assets/' -%}
 {%- assign src_to = 'src="' | append: asset_prefix -%}

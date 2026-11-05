@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-{%- assign saga = site.data.saga -%}
+{%- comment %} The Saga's settings: from its uploaded index.md (the home page, marked saga_kit), or from _data/saga.yml on sites made before that. {% endcomment %}
+{%- assign saga = site.pages | where: "url", "/" | where: "saga_kit", 1 | first | default: site.data.saga -%}
+{%- assign saga_id = saga.saga_id | default: saga.id -%}
 {%- assign style = saga.style -%}
 {%- unless style == 'long-read' or style == 'uptime-log' or style == 'at-a-glance' -%}{%- assign style = 'long-read' -%}{%- endunless -%}
 {%- assign asset_prefix = 'assets/' | relative_url -%}
@@ -53,9 +55,9 @@ layout: default
   </div>
   {%- endif %}
 
-  {%- assign chapters = site.pages | where_exp: "p", "p.path contains 'chapters/'" | where_exp: "p", "p.layout == 'chapter'" | sort: "path" | reverse %}
+  {%- assign chapters = site.pages | where_exp: "p", "p.layout == 'chapter'" | sort: "path" | reverse %}
   {%- comment %} Once a real Saga is uploaded, the template's sample chapter stays out of the list. {% endcomment %}
-  {%- if site.data.saga.id %}{%- assign chapters = chapters | where_exp: "p", "p.sample != true" %}{%- endif %}
+  {%- if saga_id %}{%- assign chapters = chapters | where_exp: "p", "p.sample != true" %}{%- endif %}
   {%- if chapters.size > 0 %}
   <section class="chapters" aria-labelledby="chapters-heading">
     <h2 id="chapters-heading">Chapters</h2>

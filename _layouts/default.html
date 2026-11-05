@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  {%- assign saga = site.data.saga -%}
-  {%- if page.sample and saga.id %}
+  {%- comment %} The Saga's settings: from its uploaded index.md (the home page, marked saga_kit), or from _data/saga.yml on sites made before that. {% endcomment %}
+  {%- assign saga = site.pages | where: "url", "/" | where: "saga_kit", 1 | first | default: site.data.saga -%}
+  {%- assign saga_id = saga.saga_id | default: saga.id -%}
+  {%- if page.sample and saga_id %}
   <meta name="robots" content="noindex">
   {%- endif %}
   {%- assign style = saga.style -%}
@@ -74,8 +76,8 @@
 
     <footer class="foot">
       <p>Published by the author on their own site. Made with the <a href="https://github.com/elfhosted/saga-template">ElfHosted Saga template</a>.</p>
-      {%- if saga.id %}
-      <p class="saga-id">Saga ID: {{ saga.id | escape }}</p>
+      {%- if saga_id %}
+      <p class="saga-id">Saga ID: {{ saga_id | escape }}</p>
       {%- endif %}
     </footer>
   </main>
