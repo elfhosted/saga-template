@@ -14,7 +14,7 @@ layout: default
 {%- assign body = content | replace: src_from, src_to | replace: href_from, href_to -%}
 <article class="saga-home">
   <header class="article-header">
-    <p class="kicker">Saga{% if saga.started %} &middot; since <time datetime="{{ saga.started | date: '%Y-%m-%d' }}">{{ saga.started | date: "%B %Y" }}</time>{% endif %}</p>
+    <p class="kicker">Saga{% if saga.started %} &middot; started <time datetime="{{ saga.started | date: '%Y-%m-%d' }}">{{ saga.started | date: "%B %Y" }}</time>{% endif %}</p>
     <h1 class="t">{{ page.title | default: saga.title | escape }}</h1>
     <p class="by">
       {%- if saga.author and saga.author != "" %}<span>By {{ saga.author | escape }}</span>{% endif %}
